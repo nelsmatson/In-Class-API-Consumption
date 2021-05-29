@@ -1,0 +1,13 @@
+﻿
+@model In_Class_API_Consumption.Models.Parks
+@{
+	ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+	
+@foreach (In_Class_API_Consumption.Models.Park park in Model.data)
+{
+	@(park.parkCode + " " + park.fullName + " " + park.latitude + "" + park.latLong)
+	<br />
+}
