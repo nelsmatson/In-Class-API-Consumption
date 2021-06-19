@@ -1,23 +1,99 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="~/css/site.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="~/css/slick.css" rel="stylesheet">
+    <link href="~/css/slick/slick-theme.css" rel="stylesheet">
+    <link href="~/css/site.css" rel="stylesheet"/>
+    <link href="~/css/style.css" rel="stylesheet" />
 </head>
 <body>
 
-  <div class="header">
-    Header goes here
-  </div>
-  
-  <div class="body-content">
-    @RenderBody()
-  </div>
+    <!-- Nav Bar Start -->
+    <div class="nav">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                <a href="#" class="navbar-brand">MENU</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-  <div class="footer">
-      <br />
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav mr-auto">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="product-list.html" class="nav-item nav-link">Products</a>
 
+                        <a href="cart.html" class="nav-item nav-link">Cart</a>
 
-    Footer goes here
-  </div>
+                        <a href="my-account.html" class="nav-item nav-link">Dashboard</a>
+
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Nav Bar End -->
+    <!-- Bottom Bar Start -->
+    <div class="bottom-bar">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="img/parklogo.jpeg" alt="Logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="search">
+                        <input type="text" placeholder="Search">
+                        <button><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="user">
+                        <a href="wishlist.html" class="btn wishlist">
+                            <i class="fa fa-heart"></i>
+                            <span>(0)</span>
+                        </a>
+                        <a href="cart.html" class="btn cart">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span>(0)</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bottom Bar End -->
+    <div class="body-content">
+        @RenderBody()
+    </div>
+
+    <div class="footer">
+        <br />
+        Footer goes here
+    </div>
+    <!-- Footer Bottom Start -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 copyright">
+                    <p>Copyright &copy; <a href="https://htmlcodex.com">HTML Codex</a>. All Rights Reserved</p>
+                </div>
+
+                <div class="col-md-6 template-by">
+                    <p>Template By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Bottom End -->
 </body>
 </html>

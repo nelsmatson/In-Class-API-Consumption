@@ -1,13 +1,31 @@
 ﻿
 @model In_Class_API_Consumption.Models.Parks
 @{
-	ViewData["Title"] = "Index";
+    ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
-	
-@foreach (In_Class_API_Consumption.Models.Park park in Model.data)
-{
-	@(park.parkCode + " " + park.fullName + " " + park.latitude + "" + park.latLong)
-	<br />
-}
+        <h2>Index</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Park Code</th>
+                    <th>Park Name</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (In_Class_API_Consumption.Models.Park park in Model.data)
+                {
+                    <tr>
+                        <td>@(park.parkCode)</td>
+                        <td>@(park.fullName)</td>
+                        <td>@(park.latitude)</td>
+                        <td>@(park.longitude)</td>
+                    </tr>
+                        // @(park.parkCode + " " + park.fullName + " " + park.latitude + "" + park.latLong)
+                        // <br />
+                        }
+            </tbody>
+        </table>
+
